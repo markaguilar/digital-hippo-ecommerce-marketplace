@@ -81,7 +81,7 @@ const start = async () => {
     trpcExpress.createExpressMiddleware({
       router: appRouter,
       createContext,
-    }),
+    })
   );
 
   app.use((req, res) => nextHandler(req, res));
@@ -91,7 +91,7 @@ const start = async () => {
 
     app.listen(PORT, async () => {
       payload.logger.info(
-        `Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`,
+        `Next.js App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`
       );
     });
   });
